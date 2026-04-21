@@ -1,0 +1,153 @@
+world_dimension: 2
+landmarks:
+- id: 1
+  x: -0.75
+  y: 0.0
+  size: 0.1
+  yaw: 0.0
+  tag_ids:
+  - 0
+  - 1
+  - 2
+  - 3
+- id: 2
+  x: 0.75
+  y: 0.0
+  size: 0.1
+  yaw: 0.0
+  tag_ids:
+  - 4
+  - 5
+  - 6
+  - 7
+- id: 3
+  x: 0.75
+  y: 2.0
+  size: 0.1
+  yaw: 0.0
+  tag_ids:
+  - 8
+  - 9
+  - 10
+  - 11
+- id: 4
+  x: -0.75
+  y: 2.0
+  size: 0.1
+  yaw: 0.0
+  tag_ids:
+  - 12
+  - 13
+  - 14
+  - 15
+- id: 5
+  x: 0.75
+  y: 1.0
+  size: 0.1
+  yaw: 0.0
+  tag_ids:
+  - 16
+  - 17
+  - 18
+  - 19
+- id: 6
+  x: -0.75
+  y: 1.0
+  size: 0.1
+  yaw: 0.0
+  tag_ids:
+  - 20
+  - 21
+  - 22
+  - 23
+filter_name: PF
+Lie2Cart: true
+alphas_sqrt:
+- 0.01
+- 0.002
+- 0.05
+- 0.01
+- 0.05
+- 0.01
+pf_alphas_sqrt:
+- 0.01
+- 0.002
+- 0.08
+- 0.02
+- 0.12
+- 0.04
+ukf_alphas_sqrt:
+- 0.02
+- 0.004
+- 0.10
+- 0.02
+- 0.10
+- 0.02
+beta: 5
+bearing_std_deg: 6.0
+range_std_m: 0.15
+ukf_bearing_std_deg: 10.0
+ukf_range_std_m: 0.25
+
+initial_state_mean:
+- 0.0
+- 0.0
+- 1.5708
+initial_state_variance:
+- 0.1
+- 0.1
+- 0.05
+pf_num_particles: 5000
+pf_initial_state_std:
+- 0.1
+- 0.1
+- 0.05
+pf_resample_threshold_ratio: 0.15
+ukf_kappa_g: 2.0
+ukf_sigma_point_jitter: 1.0e-9
+inekf_process_noise_std:
+- 0.006
+- 0.006
+- 0.010
+odom_topic: /odom
+measurement_topic: /tag_measurements_base
+detection_topic: /detections_reprocessed
+mocap_frame_rotation_deg: 11.206677
+mocap_translation_x_m: 0.009937
+mocap_translation_y_m: -0.002146
+mocap_yaw_offset_deg: 90.0
+mocap_lever_arm_x_m: 0.0
+mocap_lever_arm_y_m: 0.0
+tag_body_position_std_m: 0.20
+min_decision_margin: 100.0
+max_hamming: 0
+quality_margin_ref: 130.0
+quality_std_scale_min: 0.75
+quality_std_scale_max: 1.5
+bearing_innovation_max_deg: 85.0
+range_innovation_max_m: 2.0
+world_innovation_max_m: 0.8
+no_measurement_warning_s: 2.0
+no_correction_warning_s: 2.0
+odom_gap_warning_s: 0.2
+odom_max_substep_s: 0.25
+evaluation_gt_sync_tolerance_s: 0.05
+evaluation_gt_buffer_size: 512
+verbose_runtime_logging: false
+log_measurement_gaps: false
+log_pf_resampling: true
+pose_topic: robot_state/pose
+path_topic: robot_state/path
+path_frame_id: map
+gt_path_topic: groundtruth/path
+gt_heading_topic: groundtruth/heading
+command_path_topic: command/path
+ellipse_topic: robot_state/nonlinear_cov
+landmark_topic: landmarks
+marker_frame_id: map
+gt_heading_length: 0.18
+gt_heading_shaft_diameter: 0.03
+gt_heading_head_diameter: 0.06
+gt_heading_head_length: 0.06
+loop_sleep_time: 0.1
+mocap_topic: /ground_truth/mbot_corrected

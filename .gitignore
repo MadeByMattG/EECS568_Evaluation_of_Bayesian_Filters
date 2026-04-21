@@ -1,0 +1,41 @@
+# Python caches and tooling
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# ROS / colcon build outputs
+build/
+install/
+log/
+.vscode/
+
+# Evaluation artifacts and debug outputs
+Figure_*.png
+frames_*.gv
+frames_*.pdf
+tag_log.txt
+*_metrics.json
+
+# Rosbag archives and extracted bag directories
+*.zip
+*.mcap
+rosbag2_*/
+reprocessed_rosbag2_*/
+final_rosbag2_*/
+reprocessed_*/
+rosbags-*/
+
+# Tuning / experiment output directories
+tuning_runs/
+eval_outputs/
